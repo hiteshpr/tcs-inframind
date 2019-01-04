@@ -12,11 +12,17 @@ def my_form():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    print(request.form)
-    """ text = request.form['text']
-    print(text) """
-    """ processed_text = text.upper()
-    return processed_text """
+    
+    password = request.form['password']
+    userId = request.form['userId']
+    name = request.form['name']
+    age = request.form['age']
+    favSports = request.form['favSports']
+    gender = request.form['gender']
+
+    print(password, userId, name, age, favSports, gender)
+
+    return "hello world!"
 
 if __name__ == '__main__':
     app.run()
